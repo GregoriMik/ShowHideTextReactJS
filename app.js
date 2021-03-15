@@ -20,10 +20,12 @@ class Message extends React.Component{
     return (
     <React.Fragment>
       <button onClick={this.handleMessageButton}>
-      {this.messageIsActive ? "Pokaż" : "Ukryj" }</button>
-      <p>{text}</p>
+      {this.state.messageIsActive ?   "Ukryj":"Pokaż" }</button>
+      {this.state.messageIsActive ? <p>{text}</p> : null}
     </React.Fragment>
       )
   }
 }
 ReactDOM.render(<Message/>, document.getElementById('root'))
+
+// <p>{this.state.messageIsActive && text}</p>
