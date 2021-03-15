@@ -19,7 +19,8 @@ class Message extends React.Component{
 
     return (
     <React.Fragment>
-      <button onClick={this.handleMessageButton}>Pokaż</button>
+      <button onClick={this.handleMessageButton}>
+      {this.messageIsActive ? "Pokaż" : "Ukryj" }</button>
       <p>{text}</p>
     </React.Fragment>
       )
